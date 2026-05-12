@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 // to add , delete , update , search in System
 public class StudentManager {
-    private ArrayList<Student> students; // define ArrayList
+    private ArrayList<Student> students; // define ArrayList , concept Composition
 
     public StudentManager() {
         students = new ArrayList<>(); 
