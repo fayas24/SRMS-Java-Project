@@ -32,7 +32,7 @@ public class AutoSaveThread extends Thread {
 
                 System.out.println("Auto Save Completed.");
 
-                Thread.sleep(30000);
+                Thread.sleep(60000);
 
             }
 
