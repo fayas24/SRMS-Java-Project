@@ -1,5 +1,4 @@
 package Project;
-
 import java.util.ArrayList;
 
 
@@ -11,7 +10,14 @@ public class StudentManager {
         students = new ArrayList<>(); 
     }
     
-// to add students in ArrayList
+    public void addStudent(Student student){
+        students.add(student);
+    }
+
+    public ArrayList<Student> getStudents(){
+        return students;
+    }
+        // to add students in ArrayList
     public void addStudent() {
         java.util.Scanner scanner = new java.util.Scanner(System.in);
 
@@ -67,7 +73,7 @@ public class StudentManager {
         boolean found = false;
         for (Student student : students) {
             if (student.getStudentId().equals(id)) {
-                student.remove(student);
+                students.remove(student);
                 found = true;
                 break;
             }
@@ -96,11 +102,13 @@ public class StudentManager {
 // search in ArrayList by ID + Name
     public Student searchStudent(String id, String name) {
         for (Student student : students) {
-            if (student.getStudentId().equals(id) || student.getDepartment().equals(name)) {
+            if (student.getStudentId().equals(id) || student.getName().equals(name)) {
                 return student;
             }
         }
-        System.out.println("Student with ID " + id + " or Department " + name + " not found !");
+        System.out.println("Student with ID " + id + " or name  " + name + " not found !");
         return null;
     }
+
+
 }
