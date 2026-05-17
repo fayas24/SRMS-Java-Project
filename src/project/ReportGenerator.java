@@ -30,4 +30,4 @@ public class ReportGenerator {
             System.out.println(s);
         }
     }
-}SSS
+}
