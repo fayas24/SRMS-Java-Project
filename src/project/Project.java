@@ -10,6 +10,15 @@ public class Project {
         Scanner scanner = new Scanner(System.in);
         StudentManager manager = new StudentManager();
         
+        // FileManager object
+FileManager fileManager = new FileManager();
+
+// AutoSaveThread object
+AutoSaveThread autoSave;
+        autoSave = new AutoSaveThread(manager.getStudents());
+
+autoSave.start();
+        
         System.out.print(" HOW MANY STUDENTS DO YOU WANT ADD ?");
         int numOfstudents = scanner.nextInt();
         scanner.nextLine();
