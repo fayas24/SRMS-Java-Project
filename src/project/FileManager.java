@@ -1,3 +1,5 @@
+package Project;
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -15,7 +17,6 @@ public class FileManager {
                 writer.write(
                         student.getStudentId() + "," +
                         student.getName() + "," +
-                        student.getAge() + "," +
                         student.getGpa() + "," +
                         student.getYear() + "," +
                         student.getDepartment() + "\n"
