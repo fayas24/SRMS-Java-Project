@@ -1,4 +1,8 @@
+package Project;
+
 import java.util.ArrayList;
+
+
 
 public class AutoSaveThread extends Thread {
 
@@ -13,6 +17,12 @@ public class AutoSaveThread extends Thread {
 
     @Override
     public void run() {
+        try{
+            Thread.sleep(60000);
+        } catch(InterruptedException e){
+            
+            System.out.println("Thread interrupted");
+        }
 
         while (true) {
 
@@ -33,4 +43,6 @@ public class AutoSaveThread extends Thread {
             }
         }
     }
+
+  
 }
